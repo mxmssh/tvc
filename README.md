@@ -1,4 +1,4 @@
-# tvc
+# tvc (x86)
 The tool for bugs detection in the process of tainted data propagation (based on DBI Intel PIN).
 
 Requirements:
@@ -6,7 +6,7 @@ Requirements:
  2. Intel pin-2.13-65163-gcc.4.4.7-linux (Linux compilation)
 
 
-This tool aimed to find bugs in the process of tainted data propagation in machine code.
+This tool aimed to find bugs in the process of tainted data propagation in machine code (x86 architecture).
 Taint analyzer is taken and a little bit modified from this blog:
 http://shell-storm.org/blog/Taint-analysis-and-pattern-matching-with-Pin/
 
