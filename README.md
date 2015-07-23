@@ -10,7 +10,7 @@ This tool aimed to find bugs in the process of tainted data propagation in machi
 
 Usage:
 
-<code>pin.exe -t tvc.dll -i <syscalls list> -o <log file> -no_dll <1|0> -- <instr_app></code>
+<pre>pin.exe -t tvc.dll -i <syscalls list> -o <log file> -no_dll <1|0> -- <instr_app></pre>
 
 -i <syscalls list> - file that contains syscalls list which process tainted data 
 (PTAL syscalls.in for example)
