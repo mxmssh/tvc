@@ -10,9 +10,9 @@ This tool aimed to find bugs in the process of tainted data propagation in machi
 
 <h3>Usage:</h3>
 
-pin.exe -t tvc.dll -i <file with syscalls that process tainted data> -o <log file> -no_dll <1|0> -- <target_app>
+pin.exe -t tvc.dll -i <syscalls list> -o <log file> -no_dll <1|0> -- <target_app>
 
--i <file with syscalls that process tainted data> - file with the data in the following format:
+-i <syscalls list> - file that contains syscalls list which process tainted data in the following format:
    <syscall_name> <address of system call in the target app>
 -o <log file> - file to write results
 -no_dll - if 1 - tvc will not consider code in shared dll.
