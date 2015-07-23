@@ -469,7 +469,7 @@ void calls_handler_rtn(ADDRINT rtn_addr, ADDRINT rtn_value) {
     rtns_list.pop_back();
     print_rtns_list();
     routine_addr_to_return = -1;
-    if (rtn_current.routine_addr == -2) {
+    if (rtn_current.routine_addr == 0xFFFFFFFE) {
         OutFile << "Back to system dll ?" << endl;
         return;
     }
@@ -649,7 +649,7 @@ VOID After_malloc(ADDRINT ret, ADDRINT rtn_addr) {
   if (ret) {
       OutFile << "[INFO]\t\tmalloc(" << size_to_allocate << ") = " << std::hex
                 << ret << std::endl;
-      if (rtn_current.routine_addr == -2)
+      if (rtn_current.routine_addr == 0xFFFFFFFE)
           return;
       OutFile << "Saving new memory space for " << rtn_current.routine_addr << endl;
       HeapAllocated ha;
@@ -686,8 +686,6 @@ VOID Image(IMG img, VOID *v)
             section_boundaries.push_back(sb);
         }
     }
-    // Walk through the tainted data pointers to find syscalls
-    ADDRINT offset = IMG_LoadOffset(img);
 
     PIN_InitSymbols();
     for (SYM sym = IMG_RegsymHead(img); SYM_Valid(sym); sym = SYM_Next(sym))
