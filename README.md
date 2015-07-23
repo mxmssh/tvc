@@ -7,6 +7,8 @@ Requirements:
 
 
 This tool aimed to find bugs in the process of tainted data propagation in machine code.
+Taint analyzer is taken and a little bit modified from this blog:
+http://shell-storm.org/blog/Taint-analysis-and-pattern-matching-with-Pin/
 
 <h4>Usage:</h4>
 
