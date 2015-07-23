@@ -14,5 +14,5 @@ This tool aimed to find bugs in the process of tainted data propagation in machi
 pin.exe -t tvc.dll -i &lt;syscalls_list&gt; -o &lt;log_file&gt; -no_dll &lt;1|0&gt; -- &lt;target_app&gt;
 -i &lt;syscalls_list&gt; - file that contains syscalls list which process tainted data (PTAL tainted_syscalls.in for example).
 -o &lt;log_file&gt; - file to write results
--no_dll - if 1 - tvc will not consider code in shared dll.
+-no_dll 1 - tvc will not consider code in shared dll.
 </pre>
