@@ -8,10 +8,12 @@ Requirements:
 
 This tool aimed to find bugs in the process of tainted data propagation in machine code.
 
-Usage:
+<h4>Usage:</h4>
 
-<code>pin.exe -t tvc.dll -i &lt;syscalls list&gt; -o &lt;log file&gt; -no_dll &lt;1|0&gt; -- &lt;target_app&gt;</code>
+<code>
+pin.exe -t tvc.dll -i &lt;syscalls list&gt; -o &lt;log file&gt; -no_dll &lt;1|0&gt; -- &lt;target_app&gt;
 
 -i &lt;syscalls list&gt; - file that contains syscalls list which process tainted data (PTAL syscalls.in for example).
 -o &lt;log file&gt; - file to write results
 -no_dll - if 1 - tvc will not consider code in shared dll.
+</code>
