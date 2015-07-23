@@ -8,7 +8,7 @@ Requirements:
 
 This tool aimed to find bugs in the process of tainted data propagation in machine code.
 
-Usage:
+<h3>Usage:</h3>
 
 pin.exe -t tvc.dll -i <file with syscalls that process tainted data> -o <log file> -no_dll <1|0> -- <target_app>
 
